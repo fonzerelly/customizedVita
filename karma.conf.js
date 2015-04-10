@@ -1,4 +1,5 @@
 module.exports = function(config){
+  'use strict';
   config.set({
 
     basePath : './',
@@ -8,18 +9,23 @@ module.exports = function(config){
       'app/bower_components/angular-route/angular-route.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/components/**/*.js',
-      'app/view*/**/*.js'
+      'app/view*/**/*.js',
+      'app/vita/**/*.js'
     ],
 
     autoWatch : true,
 
     frameworks: ['jasmine'],
 
-    browsers : ['Chrome'],
+    browsers : [
+    // 'Chrome'
+    'PhantomJS'
+    ],
 
     plugins : [
             'karma-chrome-launcher',
             'karma-firefox-launcher',
+            'karma-phantomjs-launcher',
             'karma-jasmine',
             'karma-junit-reporter'
             ],

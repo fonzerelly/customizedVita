@@ -1,0 +1,92 @@
+{
+  "version": "0.0.1",
+  "jobs": [
+    {
+      "employer": "Navigon AG",
+      "title": "Software-Engineer und Projektleiter",
+      "start": "2004-01-06T23:00:00.000Z",
+      "end": "2008-06-29T22:00:00.000Z",
+      "tasks": [
+        {
+          "description": "Vor Ort Unterstützung der US-Standorts von Navigon in Chicago März bis Mai 2007"
+        },
+        {
+          "description": "Einführung eines Dokumenten Management Systems in Verbindung mt der Zertifizeriung zum Projektmanagement-Fachmann (IPMA Level D)"
+        },
+        {
+          "description": "Teilprojektleitung und struktureller Aufbau der aktuellen GUI-Oberfläche im Einsatz seit MN6"
+        },
+        {
+          "description": "Einführung der Spracherkennung (Nuance basiert) in den Mobile Navigator 4"
+        },
+        {
+          "description": "Oberflächenprogrammierung mit C++"
+        }
+      ]
+    },
+    {
+      "employer": "Elektrobit Automotive GmbH",
+      "title": "Integrator",
+      "start": "2008-07-31T22:00:00.000Z",
+      "end": "2011-09-29T22:00:00.000Z",
+      "tasks": [
+          {
+            "description": "Analyse und Verbesserung des Softwareentwicklungsprozesses"
+          },
+          {
+            "description": "Entwicklung einer internen Softwaremodulverwaltung basierend auf Python"
+          },
+          {
+            "description": "C++-Unterstützung der Fehlersuche auf Code-Ebene"
+          }
+      ]
+    },
+    {
+      "employer": "MethodPark Software AG",
+      "title": "ProductConsultant",
+      "start": "2011-09-30T22:00:00.000Z",
+      "end": "2014-03-30T22:00:00.000Z,
+      "tasks": [
+        {
+          "description": "Produktberatung und Produkterweiterungen für \"stages\"",
+        },
+        {
+          "description": "Aufbau einer JavaScript-API zur serverseitigen Visualisierung von Prozessgraphen"
+        },
+        {
+          "description": "Schulung des Versionskontrollsystems MKS"
+        }
+      ]
+    },
+    {
+      "employer": "Insert Effect GmbH",
+      "title": "Web-Developer",
+      "start": "2014-03-31T22:00:00.000Z",
+      "end": "2014-10-13T22:00:00.000Z",
+      "tasks": [
+        {
+          "description": "RESTful API-Programmierung mit Ruby on Rails"
+        },
+        {
+          "description": "Single-Page-Application mit JavaScript/AnularJS und JQuery"
+        }
+      ]
+    },
+    {
+      "employer": "Consorsbank - BNP Paribas S.A. Niederlassung Deutschland",
+      "title": "Senior Expert für Informationstechnologie",
+      "start": "2014-10-31T23:00:00.000Z",
+      "tasks": [
+        {
+          "description": "Betreuung eines proprietären Webframeworks"
+        },
+        {
+          "description": "Festlegung von Qualitätsstandards für Zulieferer"
+        },
+        {
+          "description": "Einführung von AngularJS"
+        }
+      ]
+    }
+  ]
+}
