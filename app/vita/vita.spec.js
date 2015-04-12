@@ -20,7 +20,7 @@ describe('vita', function() {
         this.response = {
           version: '0.0.1',
           jobs: []
-        }
+        };
         this.requestHandler.respond(this.response);
       }));
 
