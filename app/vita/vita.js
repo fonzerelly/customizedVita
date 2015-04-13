@@ -11,11 +11,9 @@ angular.module('customizedVita.vita', ['ngRoute'])
   .controller('VitaCtrl', ['$scope', 'VitaLoader', function($scope, VitaLoader) {
     var self = this;
     self.header = 'Lebenslauf';
+    var i = 0;
     $scope.$watch(VitaLoader.getVita, function (vita) {
       angular.extend(self, vita);
-      if (self.jobs) {
-        $scope.job = self.jobs[0];
-      }
     });
   }])
   .factory('VitaLoader', ['$http', function ($http) {
@@ -24,6 +22,7 @@ angular.module('customizedVita.vita', ['ngRoute'])
       return $http.get("/mock_data/vita.json");
     },
     vitaData;
+  var i = 0;
 
     return {
       getVita: function () {
@@ -31,19 +30,20 @@ angular.module('customizedVita.vita', ['ngRoute'])
           vitaData = loadVita().success(function (data) {
             vitaData = data;
           });
-          return {};
+        }
+        if (vitaData.then) {
+          return null;
         }
         return vitaData;
       }
     };
   }])
-  .directive('jobRole', function () {
+  .directive('cvJobRole', function () {
     return {
       restrict: "E",
-      template: "<h3>{{title}} bei {{employer}}",
+      template: "<h3>{{job.title}} bei {{job.employer}}",
       scope: {
-        title: '@',
-        employer: '@'
+        job: '='
       },
     };
   });
