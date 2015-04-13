@@ -25,6 +25,7 @@ angular.module('customizedVita.vita', ['ngRoute'])
   var i = 0;
 
     return {
+      loadVita: loadVita,
       getVita: function () {
         if (!vitaData) {
           vitaData = loadVita().success(function (data) {
