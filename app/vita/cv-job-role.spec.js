@@ -6,7 +6,7 @@ describe('cv-job-role', function () {
     this.$compile = _$compile_;
   }));
   it('should combine job.title and job.employer in a header', function () {
-    var scope = this.$rootScope;
+    var scope = this.$rootScope.$new();
     scope.job = {
       title: 'title',
       employer: 'employer'

@@ -1,3 +1,6 @@
 <h1>{{vita.header}}</h1>
 Version: {{vita.version}}
-<cv-job-role job="job" ng-init="job={title: 'CEO', employer: 'Microsoft'}"></cv-job-role>
+<div ng-init="job={title: 'CEO', employer: 'Microsoft', tasks: [ { description: 'make money' },  { description: 'rule world' } ] }">
+<cv-job-role job="job"></cv-job-role>
+<cv-job-tasks job="job"></cv-job-tasks>
+</div>

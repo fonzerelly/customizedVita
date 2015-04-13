@@ -47,4 +47,13 @@ angular.module('customizedVita.vita', ['ngRoute'])
         job: '='
       },
     };
+  })
+  .directive('cvJobTasks', function() {
+    return {
+      restrict: "E",
+      template: "<ul ng-repeat='task in job.tasks'><li>{{task.description}}</li></ul>",
+      scope: {
+        job: '='
+      }
+    };
   });
