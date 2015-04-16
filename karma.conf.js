@@ -11,8 +11,8 @@ module.exports = function(config){
       'app/bower_components/lodash/lodash.js',
       'app/components/**/*.js',
       'app/common/**/*.js',
-      'app/view*/**/*.js',
-      'app/vita/**/*.js'
+      'app/vita/vita.js',
+      'app/vita/*.js'
     ],
 
     autoWatch : true,
