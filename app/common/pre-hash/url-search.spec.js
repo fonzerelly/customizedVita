@@ -1,9 +1,9 @@
-describe('SearchService', function () {
+describe('UrlSeaerch', function () {
   'use strict';
 
-  beforeEach(module('customizedVita.vita'));
-  beforeEach(inject(function(_SearchService_) {
-    this.service = _SearchService_;
+  beforeEach(module('PreHash'));
+  beforeEach(inject(function(_UrlSearch_) {
+    this.service = _UrlSearch_;
   }));
 
   it("should be defined", function () {

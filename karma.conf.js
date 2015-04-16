@@ -10,6 +10,7 @@ module.exports = function(config){
       'app/bower_components/angular-mocks/angular-mocks.js',
       'app/bower_components/lodash/lodash.js',
       'app/components/**/*.js',
+      'app/common/**/*.js',
       'app/view*/**/*.js',
       'app/vita/**/*.js'
     ],
