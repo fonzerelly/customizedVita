@@ -1,7 +1,7 @@
 <h1>{{vita.header}}</h1>
 Version: {{vita.version}}
-<div ng-init="job={title: 'CEO', employer: 'Microsoft', start: '2009-03-19T23:00:00.000Z', end:'2010-11-27T23:00:00.000Z', tasks: [ { description: 'make money' },  { description: 'rule world' } ] }">
+<div ng-repeat="job in vita.jobs">
+<cv-job-time-span job="job"></cv-job-time-span>
 <cv-job-role job="job"></cv-job-role>
 <cv-job-tasks job="job"></cv-job-tasks>
-<cv-job-time-span job="job"></cv-job-time-span>
 </div>
