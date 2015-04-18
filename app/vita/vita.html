@@ -1,7 +1,10 @@
 <h1>{{vita.header}}</h1>
+{{vita.currentJob.employer}}
 Version: {{vita.version}}
-<div ng-repeat="job in vita.jobs">
-<cv-job-time-span job="job"></cv-job-time-span>
-<cv-job-role job="job"></cv-job-role>
-<cv-job-tasks job="job"></cv-job-tasks>
-</div>
+<cv-job-select jobs = "vita.jobs" current-job="vita.currentJob">
+</cv-job-select>
+<!-- <div ng&#45;repeat="job in vita.jobs"> -->
+<!-- <cv&#45;job&#45;time&#45;span job="job"></cv&#45;job&#45;time&#45;span> -->
+<!-- <cv&#45;job&#45;role job="job"></cv&#45;job&#45;role> -->
+<!-- <cv&#45;job&#45;tasks job="job"></cv&#45;job&#45;tasks> -->
+<!-- </div> -->

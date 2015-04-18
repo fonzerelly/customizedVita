@@ -1,0 +1,11 @@
+<!-- <select> -->
+<!--   <option ng&#45;repeat="job in jobs" ng&#45;selected="job === currentJob"> -->
+<!--     {{job.title}} -->
+<!--   </option> -->
+<!-- </select> -->
+
+<select ng-model="currentJob"
+        ng-options="wurstbrot as wurstbrot.title for wurstbrot in jobs"
+        ></select>
+
+
