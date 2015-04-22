@@ -15,6 +15,20 @@ module.exports = function(config){
       'app/vita/*.js'
     ],
 
+    preprocessors : {
+      'app/vita/!(*spec).js': 'coverage',
+      'app/common/**/!(*spec).js': 'coverage'
+    },
+
+    reporters : ['coverage'],
+
+    coverageReporter : {
+      reporters : [
+        { type: 'html', dir: 'coverage/', file: 'coverage.html'},
+        { type: 'text-summary'}
+      ]
+    },
+
     autoWatch : true,
 
     frameworks: ['jasmine'],
@@ -29,7 +43,8 @@ module.exports = function(config){
             'karma-firefox-launcher',
             'karma-phantomjs-launcher',
             'karma-jasmine',
-            'karma-junit-reporter'
+            'karma-junit-reporter',
+            'karma-coverage'
             ],
 
     junitReporter : {
