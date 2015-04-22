@@ -20,7 +20,7 @@ module.exports = function(config){
       'app/common/**/!(*spec).js': 'coverage'
     },
 
-    reporters : ['coverage'],
+    reporters : ['coverage', 'spec'],
 
     coverageReporter : {
       reporters : [
@@ -44,7 +44,8 @@ module.exports = function(config){
             'karma-phantomjs-launcher',
             'karma-jasmine',
             'karma-junit-reporter',
-            'karma-coverage'
+            'karma-coverage',
+            'karma-spec-reporter'
             ],
 
     junitReporter : {
