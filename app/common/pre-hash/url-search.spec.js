@@ -29,6 +29,31 @@ describe('UrlSeaerch', function () {
       paramList = [['a', '1'], ['a','2'], ['b','3']];
       expect(this.service.splitUrlSearch(urlSearch)).toEqual(paramList);
     });
+    it("should return empty Array in case of empty string", function () {
+      var
+      urlSearch = "",
+      paramList = [];
+      expect(this.service.splitUrlSearch(urlSearch)).toEqual(paramList);
+    });
+    it("should return empty Array in case of '?' only", function () {
+      var
+      urlSearch = "?",
+      paramList = [];
+      expect(this.service.splitUrlSearch(urlSearch)).toEqual(paramList);
+    });
+    it("should return Array with undefined value, when value is missing", function () {
+      var
+      urlSearch = "?param",
+      paramList = [['param']];
+
+      expect(this.service.splitUrlSearch(urlSearch)).toEqual(paramList);
+    });
+    it("should throw on invalid search string", function() {
+      var
+      urlSearch = "?=val",
+      paramList = [['', 'val']];
+      expect(this.service.splitUrlSearch(urlSearch)).toEqual(paramList);
+    });
   });
 
   describe("flattenPairList", function () {
@@ -77,6 +102,9 @@ describe('UrlSeaerch', function () {
     });
     it("should return empty object if only ? got passed", function () {
       expect(this.service.objectizeUrlSearch("?")).toEqual({});
+    });
+    it("should return param with undefined value if value is missing", function () {
+      expect(this.service.objectizeUrlSearch("?param")).toEqual({"param": undefined});
     });
   });
 

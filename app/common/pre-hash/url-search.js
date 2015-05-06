@@ -19,7 +19,24 @@ angular.module('PreHash', [])
         flattend[0];
     }),
 
+    hasOneElement = function (array) {
+      return array.length === 1;
+    },
+
+    //check if you can chain hasOneElement
+    cleanQuasiEmptyObject = function (array) {
+      if (hasOneElement(array) &&
+          hasOneElement(array[0]) &&
+          array[0][0] === ''
+     ) {
+       return [];
+     }
+     return array;
+    },
+
+
     splitUrlSearch = _.compose(
+        cleanQuasiEmptyObject,
        _.partial(_.map, _, split('=')),
       split('&'),
       leave(1)
